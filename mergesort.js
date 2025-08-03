@@ -18,9 +18,7 @@ function mergeSort(arr)
     while( i + j < len ) {
         if( i >= leftLen )
             sorted.push(rightSort[j++]);
-        else if( j >= rightLen )
-            sorted.push(leftSort[i++]);
-        else if( leftSort[i] < rightSort[j] )
+        else if( j >= rightLen || leftSort[i] < rightSort[j] )
             sorted.push(leftSort[i++]);
         else
             sorted.push(rightSort[j++]);
